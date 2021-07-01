@@ -98,3 +98,5 @@ button#italico{font-style: italic;padding:  0 14px;}
 button#sublinhado{text-decoration: underline;}
 button#paint-letter{border-style: none; border-radius: 50%; margin-left: 90px;}
 button#paint-letter img{width: 35px;height: 35px; background: transparent;}
+button#paint-fundo img{width: 35px;height: 35px; background: transparent; }
+button#paint-fundo {position: absolute; right: 70px; top: 10px; border-style: none; border-radius: 30%;
