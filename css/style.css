@@ -100,10 +100,11 @@ button#paint-letter{border-style: none; border-radius: 50%; margin-left: 90px;}
 button#paint-letter img{width: 35px;height: 35px; background: transparent;}
 button#paint-fundo img{width: 35px;height: 35px; background: transparent; }
 button#paint-fundo {position: absolute; right: 70px; top: 10px; border-style: none; border-radius: 30%;}
-
+.toggleColor{background-color: orange;}
 .area{
 	width: 100%;height: 100%;
 	padding: 30px 15px 30px;
 	font-size: 20px;outline-color: orange;
+
 }
 
