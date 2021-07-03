@@ -1,5 +1,5 @@
 var textarea = document.querySelector('.area');
-
+var control = true;
 
 var upcase = document.querySelector('#up-arrow');
 var downcase = document.querySelector('#down-arrow');
@@ -46,12 +46,13 @@ sublinhado.addEventListener('click',()=>{
 })
 
 paintletter.addEventListener('click',()=>{
-		paintletter.classList.toggle('toggleColor')
-		paleta.style ="display: block;"	
-
+	paintletter.classList.toggle('toggleColor',control);
+	if(control){paleta.style ="display: block;";control = false;
+	}else{paleta.style ="display: none;";control = true;} 
 })
 
 paleta.addEventListener('click',(event)=>{
+
 		  if (event.pageX > 1037 && event.pageX < 1190 && event.pageY > 198 && event.pageY < 247){
 		textarea.style.color = "#fefe33";
 	}else if (event.pageX > 1101 && event.pageX < 1142 && event.pageY > 199 && event.pageY < 274){
@@ -61,7 +62,9 @@ paleta.addEventListener('click',(event)=>{
 	}else if (event.pageX > 1168 && event.pageX < 1225 && event.pageY > 309 && event.pageY < 375){
 		
 	}else if (event.pageX > 1144 && event.pageX < 1217 && event.pageY > 369 && event.pageY < 440){
-		textarea.style.color = "red";
+		textarea.focus();
+		textarea.setSelectionRange(2, 5).style.color = "red";
+
 	}else if (event.pageX > 1116 && event.pageX < 1180 && event.pageY > 410 && event.pageY < 480){
 		textarea.style.color = "purple";
 	}else if (event.pageX > 1037 && event.pageX < 1113 && event.pageY > 343 && event.pageY < 490){
